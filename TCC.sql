@@ -1,6 +1,6 @@
 -- MySQL dump 10.13  Distrib 8.0.43, for Win64 (x86_64)
 --
--- Host: meutcc-tcc2025.b.aivencloud.com    Database: abcd
+-- Host: Cloud host    Database: abcd
 -- ------------------------------------------------------
 -- Server version	8.0.35
 
