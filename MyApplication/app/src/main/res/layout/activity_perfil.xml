@@ -1,0 +1,283 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".perfil">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/verde2"
+        android:backgroundTint="@color/verde2"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="5"
+            android:gravity="bottom"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/textView6"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="40dp"
+                android:layout_marginBottom="10dp"
+                android:drawableLeft="?attr/homeAsUpIndicator"
+                android:drawablePadding="4dp"
+                android:drawableTint="@color/white"
+                android:onClick="voltarPraDashboard"
+                android:text="Minha conta"
+                android:textColor="@color/white"
+                android:textSize="18sp"
+                android:textStyle="bold" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginBottom="50dp"
+            android:layout_weight="1"
+            android:gravity="top"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="15dp"
+                android:gravity="bottom|top"
+                android:orientation="horizontal"
+                android:weightSum="2">
+
+                <com.google.android.material.card.MaterialCardView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:cardBackgroundColor="#FFFFFF"
+                    app:cardCornerRadius="12dp"
+                    app:cardElevation="0dp"
+                    app:strokeColor="#C3C3C3">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="30dp"
+                        android:layout_marginTop="15dp"
+                        android:text="Dados Pessoais"
+                        android:textColor="@color/black"
+                        android:textSize="18sp"
+                        android:textStyle="bold" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="30dp"
+                        android:layout_marginTop="40dp"
+                        android:layout_marginRight="30dp"
+                        android:gravity="center"
+                        android:orientation="vertical"
+                        android:paddingTop="10dp">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical">
+
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginBottom="4dp"
+                                android:text="Nome de Usuário:" />
+
+                            <EditText
+                                android:id="@+id/tvNomeUsuario"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginBottom="15dp"
+                                android:background="@drawable/bordasedittext"
+                                android:backgroundTint="#66D2D2D2"
+                                android:drawableTint="@color/cardview_dark_background"
+                                android:editable="false"
+                                android:ems="10"
+                                android:inputType="text"
+                                android:paddingLeft="18dp"
+                                android:paddingTop="12dp"
+                                android:paddingBottom="12dp"
+                                android:textColor="@color/black"
+                                android:textColorHint="#80000000"
+                                android:textSize="14sp" />
+
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginBottom="4dp"
+                                android:text="Senha:" />
+
+                            <EditText
+                                android:id="@+id/tvSenha"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginBottom="15dp"
+                                android:background="@drawable/bordasedittext"
+                                android:backgroundTint="#66D2D2D2"
+                                android:editable="false"
+                                android:ems="10"
+                                android:inputType="text"
+                                android:paddingLeft="18dp"
+                                android:paddingTop="12dp"
+                                android:paddingBottom="12dp"
+                                android:textColor="@color/black"
+                                android:textColorHint="#80000000"
+                                android:textSize="14sp" />
+
+                        </LinearLayout>
+
+                    </LinearLayout>
+                </com.google.android.material.card.MaterialCardView>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="15dp"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:orientation="horizontal"
+                android:weightSum="2">
+
+                <com.google.android.material.card.MaterialCardView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:cardBackgroundColor="#FFFFFF"
+                    app:cardCornerRadius="12dp"
+                    app:cardElevation="0dp"
+                    app:strokeColor="#C3C3C3">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="30dp"
+                        android:layout_marginTop="15dp"
+                        android:text="Dados Empresariais"
+                        android:textColor="@color/black"
+                        android:textSize="18sp"
+                        android:textStyle="bold" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="30dp"
+                        android:layout_marginTop="40dp"
+                        android:layout_marginRight="30dp"
+                        android:gravity="center"
+                        android:orientation="vertical"
+                        android:paddingTop="10dp">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical">
+
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginBottom="4dp"
+                                android:text="Nome da Empresa:" />
+
+                            <EditText
+                                android:id="@+id/tvNomeEmpresa"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginBottom="15dp"
+                                android:background="@drawable/bordasedittext"
+                                android:backgroundTint="#66D2D2D2"
+                                android:editable="false"
+                                android:ems="10"
+                                android:inputType="text"
+                                android:paddingLeft="18dp"
+                                android:paddingTop="12dp"
+                                android:paddingBottom="12dp"
+                                android:textColor="@color/black"
+                                android:textColorHint="#80000000"
+                                android:textSize="14sp" />
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginBottom="4dp"
+                                android:text="CNPJ:" />
+
+                            <EditText
+                                android:id="@+id/tvCNPJ"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginBottom="15dp"
+                                android:background="@drawable/bordasedittext"
+                                android:backgroundTint="#66D2D2D2"
+                                android:editable="false"
+                                android:ems="10"
+                                android:inputType="text"
+                                android:paddingLeft="18dp"
+                                android:paddingTop="12dp"
+                                android:paddingBottom="12dp"
+                                android:textColor="@color/black"
+                                android:textColorHint="#80000000"
+                                android:textSize="14sp" />
+
+
+                            <TextView
+                                android:id="@+id/textView10"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginBottom="4dp"
+                                android:text="Email:" />
+
+                            <EditText
+                                android:id="@+id/tvEmail"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginBottom="15dp"
+                                android:background="@drawable/bordasedittext"
+                                android:backgroundTint="#66D2D2D2"
+                                android:editable="false"
+                                android:ems="10"
+                                android:inputType="text"
+                                android:paddingLeft="18dp"
+                                android:paddingTop="12dp"
+                                android:paddingBottom="12dp"
+                                android:textColor="@color/black"
+                                android:textColorHint="#80000000"
+                                android:textSize="14sp" />
+
+                            <TextView
+                                android:id="@+id/textView21"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:layout_marginRight="10dp"
+                                android:drawableLeft="@drawable/know_ic"
+                                android:drawablePadding="10dp"
+                                android:gravity="center"
+                                android:paddingBottom="10dp"
+                                android:text="Para modificar seus dados,\nnos envie um email."
+                                android:textStyle="italic" />
+
+                        </LinearLayout>
+
+                    </LinearLayout>
+                </com.google.android.material.card.MaterialCardView>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

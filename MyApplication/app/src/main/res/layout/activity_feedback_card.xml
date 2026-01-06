@@ -1,0 +1,176 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/verde2">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:padding="20dp">
+
+        <TextView
+            android:id="@+id/botaopravoltar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="start"
+            android:layout_marginLeft="40dp"
+            android:layout_marginBottom="20dp"
+            android:drawableLeft="?attr/homeAsUpIndicator"
+            android:drawablePadding="10dp"
+            android:drawableTint="@color/white"
+            android:text="Voltar"
+            android:textColor="@color/white"
+            android:textSize="20dp"
+            android:textStyle="bold" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:background="@drawable/bordasedittext"
+            android:backgroundTint="#0C8F42"
+            android:clipToPadding="false"
+            android:elevation="6dp"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:padding="20dp">
+
+            <!-- Card interno branco -->
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="5dp"
+                android:background="@drawable/bordasedittext"
+                android:backgroundTint="#FFFFFF"
+                android:clipToPadding="false"
+                android:elevation="4dp"
+                android:gravity="center"
+                android:orientation="vertical"
+                android:paddingStart="20dp"
+                android:paddingTop="20dp"
+                android:paddingEnd="20dp"
+                android:paddingBottom="5dp"
+                android:shape="rectangle">
+
+                <!-- Título -->
+                <TextView
+                    android:id="@+id/txtTitulo"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="5dp"
+                    android:gravity="center"
+                    android:text="Dê seu feedback!!"
+                    android:textColor="#0C8F42"
+                    android:textSize="18sp"
+                    android:textStyle="bold" />
+
+                <!-- Subtítulo -->
+                <TextView
+                    android:id="@+id/txtSubtitulo"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="15dp"
+                    android:gravity="center"
+                    android:text="Nos ajude dando feedback sobre nosso serviço para possamos trazer melhorias ao app"
+                    android:textColor="#0C8F42"
+                    android:textSize="14sp" />
+
+                <!-- Estrelas -->
+                <LinearLayout
+                    android:id="@+id/linhaEstrelas"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="10dp"
+                    android:gravity="center"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:id="@+id/estrela1"
+                        android:layout_width="35dp"
+                        android:layout_height="35dp"
+                        android:layout_marginEnd="4dp"
+                        android:src="@drawable/iconeestrelavazia" />
+
+                    <ImageView
+                        android:id="@+id/estrela2"
+                        android:layout_width="35dp"
+                        android:layout_height="35dp"
+                        android:layout_marginStart="4dp"
+                        android:layout_marginEnd="4dp"
+                        android:src="@drawable/iconeestrelavazia" />
+
+                    <ImageView
+                        android:id="@+id/estrela3"
+                        android:layout_width="35dp"
+                        android:layout_height="35dp"
+                        android:layout_marginStart="4dp"
+                        android:layout_marginEnd="4dp"
+                        android:src="@drawable/iconeestrelavazia" />
+
+                    <ImageView
+                        android:id="@+id/estrela4"
+                        android:layout_width="35dp"
+                        android:layout_height="35dp"
+                        android:layout_marginStart="4dp"
+                        android:layout_marginEnd="4dp"
+                        android:src="@drawable/iconeestrelavazia" />
+
+                    <ImageView
+                        android:id="@+id/estrela5"
+                        android:layout_width="35dp"
+                        android:layout_height="35dp"
+                        android:layout_marginStart="4dp"
+                        android:src="@drawable/iconeestrelavazia" />
+
+                </LinearLayout>
+
+                <!-- Texto "Descreva" -->
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="8dp"
+                    android:gravity="center"
+                    android:text="Descreva (opcional)"
+                    android:textColor="#000000"
+                    android:textSize="14sp" />
+
+                <!-- Campo de comentário -->
+
+                <!-- Botão Enviar -->
+
+            </LinearLayout>
+
+            <EditText
+                android:id="@+id/edtComentario"
+                android:layout_width="match_parent"
+                android:layout_height="100dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginBottom="15dp"
+                android:background="@drawable/bordasedittext"
+                android:backgroundTint="@color/white"
+                android:gravity="top|start"
+                android:hint="Descreva sua opinião..."
+                android:padding="10dp"
+                android:textColor="#000000"
+                android:textColorHint="#6B6B6B" />
+
+            <Button
+                android:id="@+id/btnAvaliar"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:backgroundTint="@color/verde1"
+                android:text="Enviar" />
+
+        </LinearLayout>
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

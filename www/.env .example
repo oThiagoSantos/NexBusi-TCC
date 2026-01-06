@@ -1,0 +1,3 @@
+# .env.example
+DB_URI="mysql://usuario:senha@host:porta/database?ssl-mode=REQUIRED"
+DB_NAME="nome_do_banco"

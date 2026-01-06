@@ -1,0 +1,250 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#02735F"
+    android:gravity="center"
+    tools:context=".MainActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="133dp"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/textView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="52dp"
+                android:layout_marginTop="60dp"
+                android:layout_marginEnd="0dp"
+                android:layout_marginBottom="0dp"
+                android:fontFamily="@font/inter_bold"
+                android:gravity="bottom|center"
+                android:text="@string/Registrar"
+                android:textColor="#FFFFFF"
+                android:textSize="40sp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="251dp"
+            android:gravity="bottom|center"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/txtDEmpresariais"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:layout_marginEnd="90dp"
+                android:layout_marginBottom="10dp"
+                android:fontFamily="@font/inter_bold"
+                android:text="@string/dados"
+                android:textColor="@android:color/white"
+                android:textSize="15sp" />
+
+            <EditText
+                android:id="@+id/nomeEmpresa_Et"
+                android:layout_width="320dp"
+                android:layout_height="52dp"
+                android:layout_marginStart="0dp"
+                android:layout_marginTop="0dp"
+                android:layout_marginEnd="0dp"
+                android:layout_marginBottom="10dp"
+                android:allowUndo="true"
+                android:autofillHints=""
+                android:background="@drawable/bordasedittext"
+                android:backgroundTint="#7EB8AD"
+                android:hint="@string/nomeEmpresa"
+                android:inputType="text"
+                android:paddingStart="10dp"
+                android:paddingEnd="0dp"
+                android:textColor="#FFFFFF"
+                android:textColorHint="@android:color/white"
+                android:textSize="13sp"
+                app:circularflow_defaultRadius="0dp"
+                app:circularflow_radiusInDP="0dp" />
+
+            <EditText
+                android:id="@+id/email_Et"
+                android:layout_width="320dp"
+                android:layout_height="52dp"
+                android:layout_marginStart="0dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginEnd="0dp"
+                android:layout_marginBottom="10dp"
+                android:allowUndo="true"
+                android:autofillHints=""
+                android:background="@drawable/bordasedittext"
+                android:backgroundTint="#7EB8AD"
+                android:hint="@string/emailEmpresa"
+                android:inputType="textEmailAddress"
+                android:paddingStart="10dp"
+                android:paddingEnd="0dp"
+                android:textColor="#FFFFFF"
+                android:textColorHint="@android:color/white"
+                android:textSize="13sp" />
+
+            <EditText
+                android:id="@+id/cnpj_Et"
+                android:layout_width="320dp"
+                android:layout_height="52dp"
+                android:layout_marginStart="0dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginEnd="0dp"
+                android:layout_marginBottom="10dp"
+                android:allowUndo="true"
+                android:autofillHints=""
+                android:background="@drawable/bordasedittext"
+                android:backgroundTint="#7EB8AD"
+                android:hint="@string/cnpj"
+                android:inputType="text"
+                android:paddingStart="10dp"
+                android:paddingEnd="0dp"
+                android:textColor="#FFFFFF"
+                android:textColorHint="@android:color/white"
+                android:textSize="13sp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="260dp"
+            android:gravity="center|top"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/txtDEmpresariais2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:layout_marginEnd="90dp"
+                android:layout_marginBottom="0dp"
+                android:fontFamily="@font/inter_bold"
+                android:text="@string/dadosPessoais"
+                android:textColor="@android:color/white"
+                android:textSize="15sp" />
+
+            <EditText
+                android:id="@+id/userName_Et"
+                android:layout_width="320dp"
+                android:layout_height="52dp"
+                android:layout_marginStart="0dp"
+                android:layout_marginTop="16dp"
+                android:allowUndo="true"
+                android:autofillHints=""
+                android:background="@drawable/bordasedittext"
+                android:backgroundTint="#7EB8AD"
+                android:hint="@string/userName"
+                android:inputType="text"
+                android:paddingStart="10dp"
+                android:paddingEnd="0dp"
+                android:textColor="#FFFFFF"
+                android:textColorHint="@android:color/white"
+                android:textSize="13sp" />
+
+            <EditText
+                android:id="@+id/senha_Et"
+                android:layout_width="320dp"
+                android:layout_height="52dp"
+                android:layout_marginStart="0dp"
+                android:layout_marginTop="16dp"
+                android:allowUndo="true"
+                android:autofillHints=""
+                android:background="@drawable/bordasedittext"
+                android:backgroundTint="#7EB8AD"
+                android:hint="@string/senha"
+                android:inputType="text"
+                android:paddingStart="10dp"
+                android:paddingEnd="0dp"
+                android:textColor="#FFFFFF"
+                android:textColorHint="@android:color/white"
+                android:textSize="13sp" />
+
+            <EditText
+                android:id="@+id/confSenha_Et"
+                android:layout_width="320dp"
+                android:layout_height="52dp"
+                android:layout_marginStart="0dp"
+                android:layout_marginTop="20dp"
+                android:allowUndo="true"
+                android:autofillHints=""
+                android:background="@drawable/bordasedittext"
+                android:backgroundTint="#7EB8AD"
+                android:hint="@string/ConfSenha"
+                android:inputType="text"
+                android:paddingStart="10dp"
+                android:paddingEnd="0dp"
+                android:textColor="#FFFFFF"
+                android:textColorHint="@android:color/white"
+                android:textSize="13sp" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="96dp"
+            android:gravity="center"
+            android:orientation="vertical">
+
+
+            <CheckBox
+                android:id="@+id/checkBox"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="0dp"
+                android:layout_marginTop="0dp"
+                android:background="@android:color/transparent"
+                android:button="@drawable/checkbox_custom"
+                android:paddingStart="10dp"
+                android:paddingEnd="0dp"
+                android:text="@string/TermosNexbusi"
+                android:textColor="@android:color/white"
+                android:textSize="13sp"
+                app:buttonIconTint="@color/white" />
+
+            <TextView
+                android:id="@+id/facaLogin"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/possuiConta"
+                android:textColor="@color/white"
+                android:textColorLink="#0CF25C"
+                android:textSize="13sp"
+                android:textStyle="bold" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center_horizontal"
+            android:orientation="vertical">
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/submit_btn"
+                android:layout_width="148dp"
+                android:layout_height="58dp"
+                android:layout_marginStart="100dp"
+                android:backgroundTint="#0CF25C"
+                android:text="@string/continuar"
+                android:textColor="@color/white"
+                app:icon="@drawable/seta_dir"
+                app:iconGravity="textEnd"
+                app:iconPadding="10dp"
+                app:iconSize="10dp" />
+
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

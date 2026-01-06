@@ -1,0 +1,167 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ConfirmId">
+
+    <LinearLayout
+        android:id="@+id/menuLateralDireito"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#02735F"
+        android:orientation="vertical"
+        tools:layout_editor_absoluteX="1dp"
+        tools:layout_editor_absoluteY="1dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="167dp"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/txtView3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="40dp"
+                android:layout_marginTop="55dp"
+                android:fontFamily="@font/inter_bold"
+                android:text="Confirme\nSua Identidade"
+                android:textColor="#FFFFFF"
+                android:textSize="40sp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/textView4"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="40sp"
+                android:fontFamily="@font/inter_medium"
+                android:gravity="center_vertical"
+                android:text="Baixe o arquivo para registro e edite pelo\nAdobe Acrobat, depois faça upload aqui."
+                android:textColor="#FFFFFF"
+                android:textSize="15sp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="303dp"
+            android:orientation="vertical">
+
+            <ImageView
+                android:id="@+id/imageView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:scaleType="centerCrop"
+                app:srcCompat="@drawable/key" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="80dp"
+            android:gravity="bottom|center_horizontal"
+            android:orientation="vertical">
+
+            <Button
+                android:id="@+id/btnFile"
+                android:layout_width="303dp"
+                android:layout_height="63dp"
+                android:layout_marginTop="10dp"
+                android:backgroundTint="#ffffff"
+                android:fontFamily="@font/inter_bold"
+                android:gravity="center_horizontal|center_vertical"
+                android:paddingLeft="-15dp"
+                android:text="PDF para registro"
+                android:textColor="#000000"
+                app:icon="@drawable/folder"
+                app:iconGravity="textStart"
+                app:iconPadding="22dp"
+                app:iconSize="30dp"
+                app:iconTint="#000000" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="28dp"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/baixarDoc"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Baixe o arquivo aqui"
+                android:textColor="@color/white"
+                android:textColorLink="#0CF25C"
+                android:textSize="11sp"
+                android:textStyle="bold" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="63dp"
+            android:gravity="center|center_horizontal"
+            android:orientation="vertical">
+
+            <Button
+                android:id="@+id/btnCamera"
+                android:layout_width="303dp"
+                android:layout_height="match_parent"
+                android:backgroundTint="#ffffff"
+                android:fontFamily="@font/inter_bold"
+                android:gravity="center"
+                android:text="Confirme sua identidade"
+                android:textColor="#000000"
+                app:icon="@drawable/cameraicon"
+                app:iconGravity="textStart"
+                app:iconPadding="12dp"
+                app:iconSize="30dp"
+                app:iconTint="#000000" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="20dp"
+            android:gravity="bottom|center_horizontal"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/txt"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Já possui uma conta? Faça Login"
+                android:textColor="@color/white"
+                android:textColorLink="#0CF25C"
+                android:textSize="11sp"
+                android:textStyle="bold" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="87dp"
+            android:gravity="center_vertical|end"
+            android:orientation="vertical"
+            android:paddingRight="63dp">
+
+            <com.google.android.material.button.MaterialButton
+                android:layout_width="132dp"
+                android:layout_height="46dp"
+                android:layout_marginStart="100dp"
+                android:backgroundTint="#0CF25C"
+                android:onClick="navegaParaEspera"
+                android:text="Continuar"
+                android:textColor="@color/white"
+                app:icon="@drawable/seta_dir"
+                app:iconGravity="textEnd"
+                app:iconPadding="10dp"
+                app:iconSize="10dp" />
+        </LinearLayout>
+    </LinearLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>
