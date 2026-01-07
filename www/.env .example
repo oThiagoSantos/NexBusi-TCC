@@ -1,3 +1,5 @@
 # .env.example
-DB_URI="mysql://usuario:senha@host:porta/database?ssl-mode=REQUIRED"
-DB_NAME="nome_do_banco"
+# não utilize @ ou caracteres especiais na senha!
+# Exemplo: mysql://root:minhasenha@127.0.0.1:3306/nexbusi
+DB_URI="mysql://usuario:senha@host:porta/nome_do_banco?ssl-mode=REQUIRED"
+DB_NAME="nome_do_seu_banco"

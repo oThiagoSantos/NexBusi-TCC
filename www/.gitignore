@@ -1,3 +1,5 @@
 .env
 ca.pem
 vendor/
+*.log
+.DS_STORE

@@ -6,7 +6,7 @@
 */
 ob_clean();
 
-error_reporting(0);  // Desabilita exibição de erros (use error_log em produção)
+error_reporting(0);  // Desabilita exibição de erros
 ob_start();
 
 // Função simples para carregar variáveis do .env
@@ -22,25 +22,33 @@ function loadEnv($path) {
 
 loadEnv(__DIR__ . '/.env');
 
-// Tenta ler do $_ENV (local) ou do sistema (Azure/Hospedagem)
 $uri = $_ENV['DB_URI'] ?? getenv('DB_URI') ?? '';
 $fields = parse_url($uri);
 
-// Monta o DSN usando as variáveis de ambiente
-$conn = "mysql:host=" . ($fields["host"] ?? '') . 
-        ";port=" . ($fields["port"] ?? '') . 
-        ";dbname=" . ($_ENV['DB_NAME'] ?? 'defaultdb') . 
-        ";sslmode=verify-ca;sslrootcert=ca.pem";
+// Extrai o nome do banco da própria URI caso DB_NAME não exista
+$dbName = $_ENV['DB_NAME'] ?? ltrim($fields["path"] ?? '', '/');
+
+$dsn = "mysql:host=" . ($fields["host"] ?? '') . 
+       ";port=" . ($fields["port"] ?? '3306') . 
+       ";dbname=" . $dbName;
+
+// Opções do PDO
+$options = [
+    PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION,
+    PDO::ATTR_EMULATE_PREPARES => false,
+];
+
+// Só adiciona SSL se o arquivo existir
+if (file_exists(__DIR__ . '/ca.pem')) {
+    $options[PDO::MYSQL_ATTR_SSL_CA] = __DIR__ . '/ca.pem';
+}
 
 try {
-    $db = new PDO($conn, $fields["user"] ?? '', $fields["pass"] ?? '');
-    $db->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-    $db->setAttribute(PDO::ATTR_EMULATE_PREPARES, false);
+    $db = new PDO($dsn, $fields["user"] ?? '', $fields["pass"] ?? '', $options);
 } catch (PDOException $e) {
-    $db = null;
     error_log("Erro de conexão: " . $e->getMessage());
+    die("Erro ao conectar ao banco de dados. Verifique o log.");
 }
 
 ob_end_clean();
-?>
 ?>
