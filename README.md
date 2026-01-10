@@ -52,22 +52,23 @@ O projeto utiliza uma **Arquitetura Desacoplada** (*Cloud Separation*), separand
 
 ### 2. Configuração da Base de Dados
 O esquema está localizado em `/SchemaSQL/schema.sql`.
-1. Cria uma base de dados (ex: `abcd`).
-2. Importa o ficheiro `schema.sql`. 
+1. Crie um banco de dados (ex: `abcd`).
+2. Importe o arquivo `schema.sql`. 
    *(Nota: O script foi otimizado para servidores na nuvem, removendo restrições de "Super User" que causam o erro 1227).*
 
 ### 3. Variáveis de Ambiente
-1. Na raiz do projeto, copia o ficheiro `.env.example` para `.env`:
+1. Na raiz do projeto, copia o arquivo `.env.example` para `.env`:
    ```bash
    cp .env.example .env
-2. Configure de acordo com a sua string de ligação:
+2. Configure-o de acordo com a sua string de ligação:
 
 ```bash
    DB_URI="mysql://usuario:senha@host:porta/nome_do_banco?ssl-mode=REQUIRED"
    DB_NAME="nome_do_seu_banco"
 ```
 ### 4. Ligação Segura (SSL)
-Se seu banco em nuvem exigir SSL (como o Aiven):
+
+- Se seu banco em nuvem exigir SSL (como o Aiven):
 
 1. Coloque seu certificado **ca.pem** na raiz do projeto (no mesmo lugar do arquivo `ca-certificate.example.pem`).
 
@@ -82,13 +83,35 @@ Se seu banco em nuvem exigir SSL (como o Aiven):
 
 - `connect.php:` Lógica de ligação centralizada com suporte a SSL e .env.
 
-- `.env.example:` Template para configuração de ambiente.
+- `.env.example:` Template para configuração das variáveis de ambiente.
   
-- `NexBusi.apk` Arquivo do app funcional, disponível para Teste
+- `NexBusi.apk` Arquivo do app funcional, disponível para teste.
 
 ## 🔒 Segurança e Boas Práticas
+
 - **SQL Injection:** Proteção total através do uso de Prepared Statements.
 
 - **Privacidade:** Ficheiros sensíveis (.env, ca.pem) estão protegidos via .gitignore.
 
 - **Integridade:** Uso de Chaves Estrangeiras com ON DELETE CASCADE para evitar dados órfãos.
+
+- **Verificação de registro manual**: Análise de imagens e documentos fornecidos pelo usuário para validar seu login.
+
+---
+
+## 📌 Observações finais
+**Esse projeto foi desenvolvido para fins de estudo, com enfoque em:**
+
+- Familiarização com ambiente cloud **(Aiven, Azure)** e IDE `Android Studio`.
+- Utilização de  bibliotecas ``Java`` para consumo de APIs.
+- Configuração de **variáveis de ambiente** e descentralização de servidores.
+- Integração de servidor e Banco de Dados com ``Android```.
+- Aprimoramento de segurança através de certificado de autenticação.
+
+--- 
+
+## 👨‍💻 Autor
+
+- Thiago Lima dos Santos
+  
+> **⭐ Se esse projeto te ajudou, me ajude com uma estrela no repositório! **
